@@ -1,0 +1,56 @@
+\input{preamble}
+
+\begin{document}
+\centering
+
+\newsavebox{\alphabox}
+\savebox{\alphabox}{\begin{minipage}{0.95\linewidth}
+		\begin{center}
+			\fontspec{Liberation Sans}
+			%\fontspec{Fontin Sans}
+			\fontsize{70}{84}\selectfont
+			\vspace{0.5cm}
+			\color{orange}
+			{\textbf{DOLĈAJ INFANOJ SURVOJE}}
+
+			\vspace{2.75cm}
+
+			\includegraphics[width=0.6\linewidth]{malgranda_biciklo.eps}
+
+			\vspace{1.75cm}
+
+			\fontspec{Guttman Haim}\RL{ילדים מתוקים בדרך}
+
+			\vspace{-0.8cm}
+
+		\end{center}
+	\end{minipage}
+}
+
+~
+
+\vfill
+
+\mbox{%
+\begin{tikzpicture}
+	\node (sign) [text width=0.95\linewidth] {
+		\usebox{\alphabox}
+	};
+
+	\begin{pgfonlayer}{background}
+		\draw[rounded corners=0.5cm, top color=black, bottom color=black,
+		draw=white] ($(sign.north west)+(0.0,0)$)
+		rectangle ($(sign.north east)-(0.0,3.9)$);
+		\draw[rounded corners=0.5cm,top color=black,bottom color=black] ($(sign.south west)
+		+(0.00,2.5)$) rectangle ($(sign.south east)-(0.00,1)$);
+		\draw[top color=orange,bottom color=orange,draw=black, line width=0.25cm]
+		($(sign.north east)-(0.13,3.6)$)
+		rectangle ($(sign.south west)+(0.13,2.2)$);
+	\end{pgfonlayer}
+\end{tikzpicture}}%
+
+\vfill
+
+~
+
+\end{document}

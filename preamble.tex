@@ -1,0 +1,21 @@
+\documentclass[a3paper, landscape]{article}
+\usepackage[margin=0cm]{geometry}
+\pagestyle{empty}
+
+\usepackage{xcolor}
+\pagecolor{orange}
+
+\usepackage{graphicx, xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes.misc}
+\usetikzlibrary{calc}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+\usepackage{multicol, url}
+
+\usepackage{fontspec}
+\usepackage{bidi}
+\newcommand{\symbolglyph}[1]{{\fontspec{Symbola}#1}}
+\newcommand{\symbolglyphii}[1]{{\fontspec{DejaVu Sans}#1}}
